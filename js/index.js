@@ -69,10 +69,6 @@ console.log(imgCta);
 // MIDDLE SECTION 
 let textContent = document.getElementsByClassName("main-content");
 document.querySelector('h4').textContent = siteContent.cta["h4"];
-// let middleCont = document.getElementsByClassName("top-content");
-// document.getElementsByClassName('h4').textContent = siteContent.main-content["h4"];
-// document.getElementsByClassName('p').textContent = siteContent.main-content["p"];
-// console.log(middleCont);
 
 let imgMid = document.getElementById("middle-img");
 imgMid.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
@@ -110,3 +106,31 @@ mainCont[5].textContent = siteContent["contact"]["address"];
 mainCont[6].textContent = siteContent["contact"]["phone"];
 mainCont[7].textContent = siteContent["contact"]["email"];
 mainCont[8].textContent = siteContent["footer"]["copyright"];
+
+//preppend
+const newContent =
+document.createElement("container");
+newContent.textContent = "Blog";
+const secondaryContent = document.querySelector('nav');
+secondaryContent.prepend(newContent);
+
+//Append
+const newContent2 =
+document.createElement("container");
+newContent.textContent = "Home";
+const secondaryContent2 = document.querySelector('nav');
+secondaryContent2.append(newContent2);
+document.querySelector('nav').style.color = 'green';
+
+//Examples that don't work on project
+var parent = document.createElement("div");
+parent.append("Some text");
+parent.prepend("Headline: ");
+
+console.log(parent.textContent);
+
+var parent = document.createElement("div");
+var p = document.createElement("p");
+parent.prepend("Some text", p);
+
+console.log(parent.childNodes); 
