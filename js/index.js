@@ -109,15 +109,18 @@ mainCont[8].textContent = siteContent["footer"]["copyright"];
 
 //preppend
 const newContent =
-document.createElement("container");
+document.createElement("div");
+console.log(newContent)
 newContent.textContent = "Blog";
 const secondaryContent = document.querySelector('nav');
+console.log(secondaryContent)
 secondaryContent.prepend(newContent);
 
 //Append
 const newContent2 =
-document.createElement("container");
-newContent.textContent = "Home";
+document.createElement("div");
+console.log(newContent2)
+newContent2.textContent = "Home";
 const secondaryContent2 = document.querySelector('nav');
 secondaryContent2.append(newContent2);
 document.querySelector('nav').style.color = 'green';
@@ -134,3 +137,11 @@ var p = document.createElement("p");
 parent.prepend("Some text", p);
 
 console.log(parent.childNodes); 
+
+//DOM IS AWESOME TO RESIZE
+const title = 
+document.querySelector(".cta-text h1");
+title.textContent = siteContent["cta"]["h1"];
+
+document.getElementById('domHeading').innerHTML =
+"DOM" + "<br>" + "Is" + "<br>" + "Awesome";
